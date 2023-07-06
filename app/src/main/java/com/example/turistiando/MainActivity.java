@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        audio=MediaPlayer.create(this,R.raw.audio);
+        audio=MediaPlayer.create(this,R.raw.ratablanca);
         audio.start();
 
         TimerTask inicio = new TimerTask() {
@@ -29,6 +29,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         Timer tiempo = new Timer();
-        tiempo.schedule(inicio,1000);
+        tiempo.schedule(inicio,8000);
     }
 }

@@ -2,6 +2,7 @@ package com.example.turistiando;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,8 +33,8 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(Home.this, "Estara lista en la siguiente atualizacion", Toast.LENGTH_SHORT).show();
-
+                Intent intentHoteles = new Intent(Home.this,hoteleshome.class);
+               startActivity(intentHoteles);
             }
         });
 
@@ -41,7 +42,9 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(Home.this, "Estara lista en la siguiente atualizacion", Toast.LENGTH_SHORT).show();
+
+                Intent intentHoteles = new Intent(Home.this,restaurantes.class);
+                startActivity(intentHoteles);
 
             }
         });
@@ -49,7 +52,9 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(Home.this, "Estara lista en la siguiente atualizacion", Toast.LENGTH_SHORT).show();
+
+                Intent intentHoteles = new Intent(Home.this,sitios_turisticos.class);
+                startActivity(intentHoteles);
 
             }
         });
@@ -62,16 +67,25 @@ public class Home extends AppCompatActivity {
      public boolean onOptionsItemSelected(MenuItem item ){
         int itemSeleccionado=item.getItemId();
         switch (itemSeleccionado){
+
             case(R.id.opcion1):
+                Toast.makeText(this,"Quiero que este en ingles", Toast.LENGTH_SHORT).show();
                 break;
             case (R.id.opcion2):
+                Toast.makeText(this,"Quiero que este en español", Toast.LENGTH_SHORT).show();
                 break;
             case (R.id.opcion3):
+                Toast.makeText(this,"Quiero que este en italiano", Toast.LENGTH_SHORT).show();
                 break;
             case (R.id.opcion4):
+                Toast.makeText(this,"Quiero ir a cerca de nosotros", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);
+     }
+
+     public void cambiarIdioma(String idioma){
+
      }
 
 }

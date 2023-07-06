@@ -12,6 +12,27 @@
         android:theme="@style/Theme.Turistiando"
         tools:targetApi="31">
         <activity
+            android:name=".sitios_turisticos"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".restaurantes"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".hoteleshome"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity
